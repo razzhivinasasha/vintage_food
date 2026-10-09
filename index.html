@@ -3,86 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Burgers</title>
+    <title>Vintage Food</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" href="img/icon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <div class="logo">
-            <img src="img/icon.svg"><span>Vintage Food</span>
-            <nav>
+        <div class="header-grid">
+            <div class="logo">
+                <img src="img/icon.svg" class="logo-img">
+                <p>Vintage Food</p>
+            </div>
+            <nav class="menu">
                 <ul>
                     <li><a href="">Главная</a></li>
                     <li><a href="">Акции</a></li>
                     <li><a href="">О нас</a></li>
                 </ul>
             </nav>
-            <button><img src="img/Кнопка _Корзина_.svg" alt="Корзина"></button>
+            <button class="basket">
+                <img src="img/Кнопка _Корзина_.svg" alt="Корзина" class="basket-img">
+            </button>
         </div>
-    </header>
-    <main>
-        <section class="">
-            <div>
+        
+        <div class="header-grid-2">
+            <div class="h-left">
                 <h1>Быстрая доставка для Вас</h1>
                 <p>Сделай первый заказ и получи скидку 50%</p>
                 <button>Заказать</button>
             </div>
-            <div><img src="img/Фото _Бургер_.png" alt="Фото бургера"></div>
-        </section>
+            <div class="h-right">
+                <img src="img/Фото _Бургер_.png" alt="Фото бургера" class="burger-img">
+            </div>
+        </div>
+    </header>
 
-        <section class="menu">
+    <main>
+        <section class="container-1">
             <h2>Меню</h2>
+
+            <div class="menu-grid">
             <article>
                 <a href="#" target="_self"><!--Ссылка откроется на той же странице-->
-                    <img src="img/Картинка _Бургеры_.png" alt="Бургеры">
-                    <p>Бургеры</p>
+                    <figure>
+                        <img src="img/Картинка _Бургеры_.png" alt="Бургеры" class="main-menu img-1">
+                        <figcaption>Бургеры</figcaption>
+                    </figure>
                 </a>
             </article>
             <article>
                 <a href="#" target="_self"><!--Ссылка откроется на той же странице-->
-                    <img src="img/Картинка _Блюда из курицы_.png" alt="Блюда из курицы">
-                    <p>Блюда из курицы</p>
+                    <figure>
+                        <img src="img/Картинка _Блюда из курицы_.png" alt="Блюда из курицы" class="main-menu img-2">
+                        <figcaption>Блюда из курицы</figcaption>
+                    </figure>
                 </a>
             </article>
             <article>
                 <a href="#" target="_self"><!--Ссылка откроется на той же странице-->
-                    <img src="img/Картинка _Горячие блюда_.png" alt="Горячие блюда">
-                    <p>Горячие блюда</p>
+                    <figure>
+                        <img src="img/Картинка _Горячие блюда_.png" alt="Горячие блюда" class="main-menu img-3">
+                        <figcaption>Горячие блюда</figcaption>
+                    </figure>
                 </a>
             </article>
             <article>
                 <a href="#" target="_self"><!--Ссылка откроется на той же странице-->
-                    <img src="img/Картинка _Закуски_.png" alt="Закуски">
-                    <p>Закуски</p>
+                    <figure>
+                        <img src="img/Картинка _Закуски_.png" alt="Закуски" class="main-menu img-4">
+                        <figcaption>Закуски</figcaption>
+                    </figure>
                 </a>
             </article>
             <article>
                 <a href="#" target="_self"><!--Ссылка откроется на той же странице-->
-                    <img src="img/Картинка _Салаты_.png" alt="Салаты">
-                    <p>Салаты</p>
+                    <figure>
+                        <img src="img/Картинка _Салаты_.png" alt="Салаты" class="main-menu img-5">
+                        <figcaption>Салаты</figcaption>
+                    </figure>
                 </a>
             </article>
             <article>
                 <a href="#" target="_self"><!--Ссылка откроется на той же странице-->
-                    <img src="img/Картинка _Десерты_.png" alt="Десерты">
-                    <p>Десерты</p>
+                    <figure>
+                        <img src="img/Картинка _Десерты_.png" alt="Десерты" class="main-menu img-6">
+                        <figcaption>Десерты</figcaption>
+                    </figure>
                 </a>
             </article>
+            </div>
         </section>        
     </main>
 
     <footer>
         <ul>
-            <li>Программа лояльности</li>
-            <li>Политика конфиденциальности</li>
-            <li>Договор оферты</li>
+            <li><a href="#" target="_blank">Программа лояльности</a></li>
+            <li><a href="#" target="_blank">Политика конфиденциальности</a></li>
+            <li><a href="#" target="_blank">Договор оферты</a></li>
         </ul>
 
         <p>ООО «Vintage Food»</p>
         <p>&copy; Все права защищены</p>
 
-        <div>
-            <img src="img/VK Circled.svg" alt="VK">
-            <img src="img/Telegram.svg" alt="Telegram">
+        <div class="footer-vk-telega">
+            <img src="img/VK Circled.svg" alt="VK" class="vk">
+            <img src="img/Telegram.svg" alt="Telegram" class="telegram">
         </div>
     </footer>
 </body>

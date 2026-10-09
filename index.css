@@ -1,0 +1,194 @@
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth; /*плавный переход по старнице*/
+}
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+:root {
+    --black-color: #000;
+    --yellow-color-: #EDA418;
+    --white-color: #fff;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+body {
+    width: 100%;
+    max-width: 1600px;
+    height: auto;
+}
+
+/*header*/
+header {
+    background: linear-gradient(180deg, var(--yellow-color-) 47%, var(--white-color) 100%);
+}
+.header-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    align-items: center;
+    padding: 105px 0 0;
+}
+.logo {
+    grid-column: 1 / 2;
+    justify-self: center;
+    display: flex;
+    align-items: center;
+}
+.logo-img {
+    width: 66px;
+    height: auto;
+}
+.logo p {
+    font-weight: 900;
+    font-size: 25px;
+}
+.menu {
+    grid-column: 2 / 3;
+    justify-self: end;
+}
+.menu ul {
+    display: flex;
+    font-weight: 500;
+    font-size: 25px;
+    gap: 66.5px;
+}
+li {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+    color: var(--black-color);
+    cursor: pointer;
+}
+.menu a:hover {
+    font-weight: 700;
+}
+.basket { /*скругление приминяем к самой кнопке, не к img*/
+    grid-column: 3 / 4;
+    justify-self: center;
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+    border: none;
+    cursor: pointer;
+}
+.header-grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    align-items: center;
+    gap: 38px;
+    
+}
+.h-left {
+    grid-column: 1 / 2;
+    justify-self: center;
+}
+h1 {
+    font-weight: 800;
+    font-size: 32px;
+    margin-bottom: 54px;
+}
+p {
+    font-weight: 400;
+    font-size: 16px;
+    margin-bottom: 29px;
+}
+.header-grid-2 button {
+    width: 180px;
+    height: 60px;
+    font-weight: 400;
+    font-size: 24px;
+    border: none;
+    border-radius: 50px;
+    background-color: red;
+    color: var(--white-color);
+    cursor: pointer;
+}
+.h-right {
+    grid-column: 2 / 3;
+    justify-self: start;
+    /* Сдвигает весь блок с картинкой влево на 200px, не ломая сетку */
+    transform: translateX(-80px);
+}
+.burger-img {
+    width: 100%;
+    max-width: 642px;
+    height: auto;
+}
+
+/*main*/
+/*container-1*/
+h2 {
+    font-weight: 500;
+    font-size: 45px;
+    text-align: center;
+}
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    padding: 38px 87px;
+    gap: 38px;
+}
+figure {
+    margin: 0px auto;
+    text-align: center;
+}
+.main-menu {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    border-radius: 50px;
+}
+figcaption {
+    font-weight: 500;
+    font-size: 35px;
+}
+
+/*footer*/
+footer {
+    background: var(--white-color);
+    background: linear-gradient(180deg, var(--white-color) 0%, var(--yellow-color-) 100%);
+    text-align: center;
+    font-weight: 400;
+    font-size: 20px;
+    padding: 157px 0 80px;
+}
+footer ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    justify-content: center;
+    margin-bottom: 45px; 
+}
+footer ul li:nth-child(1) {
+    justify-self: end;/* Прижать элемент к правому краю ячейки */
+}
+footer ul li:nth-child(2) {
+    justify-self: center;/* Выровнять по центру ячейки */
+}
+footer ul li:nth-child(3) {
+    justify-self: start; /* Прижать к левому краю ячейки */
+}
+footer p+p {
+    padding-top: 24px;
+    padding-bottom: 22px; 
+}
+.footer-vk-telega {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.vk {
+    width: 50px;
+    height: auto;
+}
+.telegram {
+    width: 60px;
+    height: auto;
+}
