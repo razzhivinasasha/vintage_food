@@ -3,6 +3,8 @@ html {
     scroll-behavior: smooth; /*плавный переход по старнице*/
 }
 *, *::before, *::after {
+    margin: 0;
+    padding: 0;
     box-sizing: inherit;
 }
 :root {
@@ -17,24 +19,24 @@ body {
     width: 100%;
     max-width: 1600px;
     height: auto;
-    margin: 0;
-    padding: 0;
 }
 
 /*header*/
 header {
     background: linear-gradient(180deg, var(--yellow-color-) 47%, var(--white-color) 100%);
 }
-.h-top {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: nowrap;
+.header-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
     align-items: center;
-    padding-top: 105px;
+    padding: 105px 0 0;
 }
 .logo {
+    grid-column: 1 / 2;
+    justify-self: center;
     display: flex;
-    align-items: center;   
+    align-items: center;
 }
 .logo-img {
     width: 66px;
@@ -44,17 +46,18 @@ header {
     font-weight: 900;
     font-size: 25px;
 }
+.menu {
+    grid-column: 2 / 3;
+    justify-self: end;
+}
 .menu ul {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    font-weight: 500;
+    font-size: 25px;
     gap: 66.5px;
-    transition: text-shadow 0.2s ease; /* Плавный переход по желанию */
 }
 li {
     list-style-type: none;
-    font-weight: 500;
-    font-size: 25px;
 }
 a {
     text-decoration: none;
@@ -62,41 +65,40 @@ a {
     cursor: pointer;
 }
 .menu a:hover {
-    text-shadow: 1px 0 0 currentColor, -.5px 0 0 currentColor;  /* Размытие размывает тень, делая буквы "жирнее" */
+    font-weight: 700;
 }
 .basket { /*скругление приминяем к самой кнопке, не к img*/
+    grid-column: 3 / 4;
+    justify-self: center;
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
     border: none;
-    background-color: var(--yellow-color-);
     cursor: pointer;
 }
-.basket-img {
-    width: 70px;
-    height: auto; 
-}
-
-.h-main {
-    display: flex;
+.header-grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
     align-items: center;
-    justify-content: space-evenly;
+    gap: 38px;
     
 }
 .h-left {
-    display: flex;
-    flex-direction: column;
+    grid-column: 1 / 2;
+    justify-self: center;
 }
 h1 {
     font-weight: 800;
     font-size: 32px;
-    margin: 0;
     margin-bottom: 54px;
 }
-.h-left p {
+p {
     font-weight: 400;
     font-size: 16px;
-    margin: 0;
-    margin-bottom: 45px;
+    margin-bottom: 29px;
 }
-.h-main button {
+.header-grid-2 button {
     width: 180px;
     height: 60px;
     font-weight: 400;
@@ -106,12 +108,16 @@ h1 {
     background-color: red;
     color: var(--white-color);
     cursor: pointer;
-    margin: 0;
 }
-
+.h-right {
+    grid-column: 2 / 3;
+    justify-self: start;
+    /* Сдвигает весь блок с картинкой влево на 200px, не ломая сетку */
+    transform: translateX(-80px);
+}
 .burger-img {
     width: 100%;
-    max-width: 643px;
+    max-width: 642px;
     height: auto;
 }
 
@@ -139,9 +145,6 @@ figure {
     height: auto;
     border-radius: 50px;
 }
-.main-menu:hover {
-    box-shadow: 0px 0px 13px 1px rgba(59, 46, 10, 1);
-}
 figcaption {
     font-weight: 500;
     font-size: 35px;
@@ -152,20 +155,16 @@ footer {
     background: var(--white-color);
     background: linear-gradient(180deg, var(--white-color) 0%, var(--yellow-color-) 100%);
     text-align: center;
+    font-weight: 400;
+    font-size: 20px;
+    padding: 157px 0 80px;
 }
 footer ul {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
     justify-content: center;
-    margin: 0;
-    padding: 0;
-    margin-bottom: 45px;
-    padding-top: 157px; 
-}
-footer ul li {
-    font-weight: 400;
-    font-size: 20px;
+    margin-bottom: 45px; 
 }
 footer ul li:nth-child(1) {
     justify-self: end;/* Прижать элемент к правому краю ячейки */
@@ -176,22 +175,14 @@ footer ul li:nth-child(2) {
 footer ul li:nth-child(3) {
     justify-self: start; /* Прижать к левому краю ячейки */
 }
-footer ul li {
-    font-weight: 400;
-    font-size: 20px;
-}
-footer p {
-    font-weight: 500;
-    font-size: 20px;
-}
 footer p+p {
-    padding: 24px 0 17px; 
+    padding-top: 24px;
+    padding-bottom: 22px; 
 }
 .footer-vk-telega {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-bottom: 80px;
 }
 .vk {
     width: 50px;
