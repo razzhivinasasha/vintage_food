@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Danfo&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -17,21 +18,31 @@
                 <img src="img/icon.svg" class="logo-img">
                 <p>Vintage Food</p>
             </div>
+
             <nav class="menu">
+            <!--СКРЫТЫЙ БЛОК
+            Чекбокс для переключения меню -->
+            <input type="checkbox" id="menu-burger" class="menu-burger">
+            <label for="menu-burger" class="new-menu"></label>
                 <ul>
-                    <li><a href="">Главная</a></li>
-                    <li><a href="">Акции</a></li>
-                    <li><a href="">О нас</a></li>
+                    <li><a href="#">Главная</a></li>
+                    <li><a href="#">Акции</a></li>
+                    <li><a href="#">О нас</a></li>
                 </ul>
             </nav>
+
             <button class="basket">
                 <img src="img/Кнопка _Корзина_.svg" alt="Корзина" class="basket-img">
             </button>
         </div>
         
+        <!--СКРЫТЫЙ БЛОК-->
+        <h1>Vintage
+            <br>Food</h1>
+
         <div class="h-main">
             <div class="h-left">
-                <h1>Быстрая доставка для Вас</h1>
+                <h2>Быстрая доставка для Вас</h2>
                 <p>Сделай первый заказ и получи скидку 50%</p>
                 <button>Заказать</button>
             </div>
@@ -39,11 +50,19 @@
                 <img src="img/Фото _Бургер_.png" alt="Фото бургера" class="burger-img">
             </div>
         </div>
+
+        <!--СКРЫТЫЙ БЛОК-->
+        <div class="h-main-media">
+            <h2>Быстрая доставка для Вас</h2>
+            <img src="img/Фото _Бургер_.png" alt="Фото бургера" class="burger-img">
+            <p>Сделай первый заказ и получи скидку 50%</p>
+            <button>Заказать</button>
+        </div>
     </header>
 
     <main>
         <section>
-            <h2>Меню</h2>
+            <h3>Меню</h3>
 
             <div class="menu-grid">
             <article>
