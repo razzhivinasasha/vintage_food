@@ -289,12 +289,13 @@ footer p+p {
         display: block;
     }
     .basket { /*скругление приминяем к самой кнопке, не к img*/
-        width: 50px;
-        height: 50px;
+        width: 100%;
+        max-width: 50px;
+        height: auto;
         margin-right: 10px;
     }
     .basket-img {
-        width: 50px;
+        width: 100%;
         height: auto;    
     }
 
@@ -309,7 +310,7 @@ footer p+p {
         text-align: center;
         color: var(--white-color);
         -webkit-text-stroke: 2.5px #322002; /* Задаем толщину и цвет обводки (черный) */
-        text-shadow: 0px 0px 9px rgba(93, 60, 4, 1); /* Цвет в RGBA*/
+        text-shadow: 0px 0px 14px rgba(93, 60, 4, 1); /* Цвет в RGBA*/
         margin: 20px 10px;
     }
     .h-main {
@@ -317,16 +318,17 @@ footer p+p {
     }
     .h-main-media {
         display: grid;
-        grid-template-columns: 1fr auto;
+        grid-template-columns: 1fr 2fr;
         grid-template-rows: repeat(3, auto);
         align-items: center;
         padding: 0 20px;
-        margin: 30px 0;
+        margin: 50px 0;
     }
     h2 {
         grid-column: 1/2;
         grid-row: 1/2;
-        font-size: 7vw;
+        font-size: 5vw;
+        white-space: normal;
         margin: 0;
     }
     .h-main-media p {
