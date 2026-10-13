@@ -312,7 +312,7 @@ footer p+p {
         color: var(--white-color);
         -webkit-text-stroke: 2.5px #322002; /* Задаем толщину и цвет обводки (черный) */
         text-shadow: 0px 0px 14px rgba(93, 60, 4, 1); /* Цвет в RGBA*/
-        margin: 10px 10px;
+        margin: 5px 10px;
     }
     .h-main {
         display: none;
@@ -323,13 +323,14 @@ footer p+p {
         grid-template-rows: repeat(3, auto);
         align-items: center;
         padding: 0 10px;
-        margin: 20px 0;
+        margin: 10px 0;
     }
     h2 {
         grid-column: 1/2;
         grid-row: 1/2;
-        font-size: 4vw;
+        font-size: 6.5vw;
         white-space: normal;
+        text-align: center;
         margin: 0;
     }
     .h-main-media p {
@@ -338,7 +339,7 @@ footer p+p {
         font-weight: 400;
         font-size: 16px;
         margin: 0;
-        padding: 20px 50px;
+        padding: 10px 50px;
         text-align: center;
     }
     .h-main-media button {
@@ -346,7 +347,7 @@ footer p+p {
         grid-row: 3/4;
         width: 140px;
         height: 45px;
-        margin: 30px auto;
+        margin: 20px auto 30px;
     }
     .h-main-media button:hover {
         border: 2px solid var(--yellow-color-);
