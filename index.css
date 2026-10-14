@@ -223,13 +223,9 @@ footer p+p {
 @media screen and (max-width: 479.98px) {
     body {
         width: 100%;
-        max-width: 480px;
         height: auto;
     }
     /*header*/
-    header {
-        background: linear-gradient(180deg, var(--yellow-color-) 47%, var(--white-color) 100%);
-    }
     .h-top {
         display: grid;
         /* 1. Логотип забирает максимум места (1fr), меню и корзина сжимаются под свой контент (auto) */
@@ -405,5 +401,191 @@ footer p+p {
     .footer-vk-telega {
         padding: 50px 0;
     }
+}
 
+/*Телефоны в горизонтальном положении*/
+@media screen and (min-width: 480px) and (max-width: 767.98px) {
+    body {
+        width: 100%;
+        height: auto;
+    }
+    /*header*/
+    .h-top {
+        display: grid;
+        /* 1. Логотип забирает максимум места (1fr), меню и корзина сжимаются под свой контент (auto) */
+        grid-template-columns: 1fr auto auto;
+        grid-template-rows: 1fr;
+        justify-content: space-around;
+        gap: 10px;
+        padding: 10px 10px 0;
+    }
+    .logo p {
+        display: none; /* Полностью скрывает текст у логотипа и убирает его из верстки */
+    }
+    .menu ul {
+        position: absolute;
+        z-index: 1;
+        top: 60px;
+        right: 10px;
+        display: inline-block;
+        width: 200px;
+        height: 200px;
+        /* Начинается с чистого черного на 9%, а к 86% плавно становится 100% прозрачным */
+        background: linear-gradient(237deg, var(--yellow-color-) 25%, transparent 75%);
+        text-align: end;
+        text-transform: uppercase;
+        letter-spacing: .3em;
+        padding: 0;
+        transition: text-shadow 0.2s ease; /* Плавный переход по желанию */
+        display: none;
+    }
+    .menu ul li {
+        font-weight: 500;
+        font-size: 18px;
+        padding: 10px 0;
+    }
+    .menu a {
+        font-weight: 700;
+        color: #000;
+    }
+    .menu a:active {
+        text-shadow: 1px 0 0 currentColor, -.5px 0 0 currentColor;  /* Размытие     размывает тень, делая буквы "жирнее" */
+    }
+    .menu-burger {
+        display: none;
+    }
+    .new-menu {
+        position: relative;
+        z-index: 0;
+        display: block;
+        width: 40px;
+        height: 40px;
+        background-image: url('https://img.icons8.com/?size=40&id=59832&format=png&color=000000');
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
+    }
+     /* При активации чекбокса показываем меню */
+    .menu-burger:checked + .new-menu ~ ul {
+        display: block;
+    }
+    .basket { /*скругление приминяем к самой кнопке, не к img*/
+        width: 100%;
+        max-width: 56px;
+        height: auto;
+        margin-right: 10px;
+    }
+    .basket-img {
+        width: 100%;
+        height: auto;    
+    }
+    h1 {
+        display: block; /*проявляем наш h1*/
+        font-family: "Danfo", serif;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+        font-variation-settings:"ELSH" 0;
+        font-size: 21vw;
+        line-height: 1em;
+        text-align: center;
+        color: var(--white-color);
+        -webkit-text-stroke: 2.5px #322002; /* Задаем толщину и цвет обводки (черный) */
+        text-shadow: 0px 0px 14px rgba(93, 60, 4, 1); /* Цвет в RGBA*/
+        margin: 5px 10px 0;
+    }
+    .h-main {
+        display: none;
+    }
+    .h-main-media {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: repeat(3, auto);
+        align-items: center;
+        padding: 0 30px;
+        margin: 5px 0 0;
+    }
+    h2 {
+        grid-column: 1/2;
+        grid-row: 1/2;
+        font-size: 5.5vw;
+        white-space: normal;
+        text-align: center;
+        margin: 0;
+    }
+    .h-main-media p {
+        grid-column: 1/3;
+        grid-row: 2/3;
+        font-weight: 400;
+        font-size: 16px;
+        margin: 0;
+        padding: 0 70px;
+        text-align: center;
+    }
+    .h-main-media button {
+        grid-column: 1/3;
+        grid-row: 3/4;
+        width: 140px;
+        height: 45px;
+        margin: 20px auto 30px;
+    }
+    .h-main-media button:hover {
+        border: 2px solid var(--yellow-color-);
+        box-shadow: -1px 0px 19px 6px rgba(108, 87, 9, 0.81);
+    }
+    .burger-img {
+        grid-column: 2/3;
+        grid-row: 1/2;
+        width: 100%;
+        max-width: 643px;
+        height: auto;
+    }
+
+    /*main*/
+    h3 {
+        font-weight: 500;
+        font-size: 35px;
+        text-align: center;
+        }
+    .menu-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        padding: 30px 20px;
+        gap: 20px;
+    }
+    .main-menu {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+    }
+    .main-menu:active {
+        box-shadow: 0px 0px 13px 1px rgba(59, 46, 10, 1);
+    }
+    figcaption {
+        font-weight: 400;
+        font-size: 3.5vw;
+    }
+
+    /*footer*/
+    footer ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 15px;
+        margin: 0;
+        padding: 100px 0 80px; 
+    }
+    footer p {
+        font-weight: 500;
+        font-size: 20px;
+        margin: 0;
+        padding: 0;
+    }
+    footer p+p {
+        padding: 5px 0 0;  
+    }
+    .footer-vk-telega {
+        padding: 50px 0;
+    }
 }
