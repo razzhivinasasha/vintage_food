@@ -404,7 +404,7 @@ footer p+p {
 }
 
 /*Телефоны в горизонтальном положении*/
-@media screen and (min-width: 480px) and (max-width: 767.98px) {
+@media screen and (min-width: 480px) and (max-width: 931.98px) {
     body {
         width: 100%;
         height: auto;
