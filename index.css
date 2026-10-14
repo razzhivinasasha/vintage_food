@@ -181,7 +181,7 @@ footer ul {
     padding: 0;
     margin-bottom: 45px;
     padding-top: 157px; 
-}; 
+} 
 footer ul li {
     font-weight: 400;
     font-size: 20px;
@@ -403,7 +403,13 @@ footer p+p {
     }
 }
 
-/*Телефоны в горизонтальном положении*/
+/*Телефоны в горизонтальном положении
+/* Стили для iPhone 16 (включительно) в горизонтальном положении */
+
+/*and (orientation: landscape)
+Если его убрать, то в диапазон от 480px до 931.98px попадут не только телефоны на боку, но и вертикальные планшеты (например, обычный iPad в вертикальном режиме имеет ширину 768px или 810px).
+- Если вы хотите, чтобы там были только горизонтальные смартфоны, пишите ориентацию.
+- Если вас устраивает, что вертикальные планшеты получат те же стили, что и телефоны на боку — оставляйте без ориентации (это тоже частая практик*/
 @media screen and (min-width: 480px) and (max-width: 931.98px) {
     body {
         width: 100%;
@@ -587,5 +593,34 @@ footer p+p {
     }
     .footer-vk-telega {
         padding: 50px 0;
+    }
+}
+/* Здесь отлично умещаются стандартные iPad в режиме landscape и iPad Pro в вертикальном (portrait) режиме */
+@media  screen and (min-width: 932px) and (max-width: 1279.98px) {
+    body {
+        width: 100%;
+        height: auto;
+    }
+    .h-top {
+        justify-content: space-between;
+        padding: 105px 50px 0;
+    }
+    .h-main {
+        padding: 0 50px;
+    }
+    .menu-grid {
+        padding: 38px 50px;
+        gap: 20px;
+    }
+    figcaption {
+        font-weight: 400;
+        font-size: 2.7vw;
+    }
+    footer ul {
+        gap: 30px;
+        padding-top: 100px; 
+    } 
+    footer ul li {
+        font-size: 18px;
     }
 }
